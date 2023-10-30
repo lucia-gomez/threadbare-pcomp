@@ -1,0 +1,133 @@
+<html>
+	<head>
+		<!-- Google tag (gtag.js) -->
+		<script
+			async
+			src="https://www.googletagmanager.com/gtag/js?id=G-E8PCGY9Q92"
+		></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag("js", new Date());
+			gtag("config", "G-E8PCGY9Q92");
+		</script>
+		<!-- Google Tag Manager -->
+		<script>
+			(function (w, d, s, l, i) {
+				w[l] = w[l] || [];
+				w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+				var f = d.getElementsByTagName(s)[0],
+					j = d.createElement(s),
+					dl = l != "dataLayer" ? "&l=" + l : "";
+				j.async = true;
+				j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+				f.parentNode.insertBefore(j, f);
+			})(window, document, "script", "dataLayer", "GTM-TM9HQ2J");
+		</script>
+		<!-- End Google Tag Manager -->
+		<title>Threadbare</title>
+		<meta
+			property="og:image"
+			content="https://lucia-gomez.github.io/threadbare/icons/preview.png"
+		/>
+		<meta
+			property="og:description"
+			content="Threadbare - a geometric drawing tool"
+		/>
+		<meta
+			property="og:url"
+			content="https://lucia-gomez.github.io/threadbare/"
+		/>
+		<meta property="og:title" content="Threadbare" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"
+		/>
+		<script
+			src="https://kit.fontawesome.com/9dd13a1052.js"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"
+			integrity="sha512-3RlxD1bW34eFKPwj9gUXEWtdSMC59QqIqHnD8O/NoTwSJhgxRizdcFVQhUMFyTp5RwLTDL0Lbcqtl8b7bFAzog=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"
+			integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
+		<script src="segment.js"></script>
+		<script src="controls.js"></script>
+		<script src="state.js"></script>
+		<script src="sketch.js"></script>
+		<link rel="stylesheet" href="main.css" />
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="./icons/apple-touch-icon.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./icons/favicon-32x32.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="./icons/favicon-16x16.png"
+		/>
+		<link rel="icon" type="image/x-icon" href="./icons/favicon.ico" />
+		<link rel="manifest" href="./site.webmanifest" />
+	</head>
+	<body>
+		<!-- Google Tag Manager (noscript) -->
+		<noscript
+			><iframe
+				src="https://www.googletagmanager.com/ns.html?id=GTM-TM9HQ2J"
+				height="0"
+				width="0"
+				style="display: none; visibility: hidden"
+			></iframe
+		></noscript>
+		<!-- End Google Tag Manager (noscript) -->
+		<div id="menu">
+			<div id="buttons">
+				<div class="hotkey">
+					<i class="fas fa-undo" onclick="undo()"></i>
+					<p>Z</p>
+				</div>
+				<div class="hotkey">
+					<i class="fas fa-trash" onclick="resetDrawing()"></i>
+					<p>X</p>
+				</div>
+				<div class="hotkey">
+					<i class="fas fa-camera" onclick="save()"></i>
+					<p>S</p>
+				</div>
+				<div class="hotkey">
+					<i class="fas fa-unlock" id="lock-icon" onclick="toggleLock()"></i>
+					<p>L</p>
+				</div>
+				<div class="hotkey">
+					<i class="fas fa-cog" onclick="toggleMenu()"></i>
+					<p>H</p>
+				</div>
+			</div>
+			<!-- Populated in controls.js -->
+			<div id="controls">
+				<div id="color-controls" class="control-row">
+					<label>Colors</label>
+				</div>
+				<div id="checkbox-controls"></div>
+			</div>
+			<p id="dragText">Press and hold cursor to pause drawing</p>
+		</div>
+	</body>
+</html>
